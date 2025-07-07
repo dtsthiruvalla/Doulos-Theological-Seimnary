@@ -11,6 +11,9 @@ export const navigationLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
+export const director = {
+  image2: "src/assets/BenssenYohannan.webp"
+};
 export const footerLinks = {
   company: [
     { name: "About Us", path: "/about" },
@@ -79,7 +82,7 @@ export const teamData = {
     {
       name: "Dr. P.S. Prince",
       qualification: "MA, MSc, B.D, STM, D.Miss.",
-      image: "",
+      image: "null",
     },
     {
       name: "Dr. KP Saji Kumar",
@@ -109,7 +112,7 @@ export const teamData = {
     {
       name: "Dr. Allan Pallivadakkan",
       qualification: "BSW, MCS, P.A.M.A, M.Phil, D.Min",
-      image: "",
+      image: "null",
     },
     {
       name: "Pr. V.A. Sunny",

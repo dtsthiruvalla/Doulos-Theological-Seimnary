@@ -12,7 +12,7 @@ import {
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import ScrollReveal from '../components/ScrollReveal';
-import { teamData } from '../constants';
+import { teamData, director } from '../constants';
 
 const Home = () => {
     return (
@@ -371,7 +371,7 @@ const DirectorDetails = () => (
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="flex-shrink-0">
                             <img
-                                src={teamData.principal.image}
+                                src={director.image2}
                                 alt={teamData.principal.name}
                                 className="w-32 h-32 rounded-full object-cover shadow-lg"
                             />
