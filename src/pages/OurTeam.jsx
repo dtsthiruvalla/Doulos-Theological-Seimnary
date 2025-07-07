@@ -65,7 +65,7 @@ const AdministratorsSection = () => (
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                         <div className="lg:col-span-1 text-center">
                             <img
-                                src="/api/placeholder/300/300"
+                                src={teamData.principal.image}
                                 alt={teamData.principal.name}
                                 className="w-48 h-48 rounded-full object-cover mx-auto shadow-lg mb-4"
                             />
@@ -179,7 +179,7 @@ const OfficeTeamSection = () => (
                 </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {teamData.officeTeam.map((staff, index) => (
                     <motion.div
                         key={staff.name}
@@ -189,7 +189,7 @@ const OfficeTeamSection = () => (
                     >
                         <Card className="text-center">
                             <img
-                                src="/api/placeholder/200/200"
+                                src={staff.image}
                                 alt={staff.name}
                                 className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
                             />
@@ -217,7 +217,7 @@ const OfficeTeamSection = () => (
 const TeamMemberCard = ({ member }) => (
     <Card className="text-center h-full">
         <img
-            src="/api/placeholder/200/200"
+            src={member.image}
             alt={member.name}
             className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
         />

@@ -5,6 +5,8 @@ import { HiMenu, HiX, HiSun, HiMoon } from 'react-icons/hi';
 import { useTheme } from '../../context/ThemeContext';
 import { navigationLinks } from '../../constants';
 
+import LOGO from '../../assets/logo_Doulos_blue6.png'; // Ensure this path is correct   
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -34,9 +36,9 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20  ">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center space-x-3">
+                    <Link to="/" className="flex items-center space-x-3 focus:outline-none focus-visible:outline-none ">
                         <img
-                            src="/src/assets/logo_Doulos_blue6.png"
+                            src={LOGO}
                             alt="Doulos Logo"
                             className="h-16 mb-2 scale-120 w-auto transition-transform duration-300 transform"
                         />
@@ -116,7 +118,7 @@ const Navbar = () => {
 };
 
 const NavLink = ({ to, children, external, isActive }) => {
-    const baseClasses = "relative px-3 py-2 text-sm font-medium transition-colors duration-200";
+    const baseClasses = "relative px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus:bg-blue-800/10 dark:focus:bg-blue-400/10 rounded-md";
     const activeClasses = isActive
         ? "text-blue-800 dark:text-blue-400"
         : "text-gray-700 dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-400";
@@ -154,7 +156,7 @@ const NavLink = ({ to, children, external, isActive }) => {
 };
 
 const MobileNavLink = ({ to, children, external, isActive, onClick }) => {
-    const baseClasses = "block px-4 py-3 text-base font-medium rounded-lg transition-colors duration-200";
+    const baseClasses = "block px-4 py-3 text-base font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:bg-blue-800/10 dark:focus:bg-blue-400/10";
     const activeClasses = isActive
         ? "bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-400"
         : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800";

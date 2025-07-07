@@ -18,7 +18,8 @@ body,
 #root {
   height: 100%;
   margin: 0;
-  padding: 0;}
+  padding: 0;
+}
 
 /* Smooth scrolling */
 html {
@@ -27,33 +28,34 @@ html {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f5f9; /* Light gray background */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+  background: #1e40af; /* Primary blue color */
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #3b82f6; /* Lighter blue on hover */
 }
 
 /* Dark mode scrollbar */
 .dark ::-webkit-scrollbar-track {
-  background: #2d3748;
+  background: #1f2937; /* Dark gray background */
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #4a5568;
+  background: #3b82f6; /* Blue in dark mode */
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #718096;
+  background: #60a5fa; /* Lighter blue on hover in dark mode */
 }
 
 /* Focus styles */

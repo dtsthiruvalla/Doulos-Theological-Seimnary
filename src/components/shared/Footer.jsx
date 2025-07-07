@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
 import { footerLinks, contactInfo } from '../../constants';
+import LOGO from '../../assets/logo_Doulos_blue7.png'; // Ensure this path is correct
 
 const Footer = () => {
     return (
         <footer className="bg-gray-900 dark:bg-black text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {/* Main Footer Content */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 text-center md:text-left">
                     {/* Company Links */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -39,7 +40,7 @@ const Footer = () => {
                     >
                         <h3 className="text-lg font-semibold mb-4 text-orange-500">Doulos College</h3>
                         <div className="space-y-3">
-                            <div className="flex items-center space-x-3">
+                            <div className="flex items-center space-x-3 justify-center md:justify-start">
                                 <HiMail className="text-orange-500" size={18} />
                                 <a
                                     href={`mailto:${contactInfo.email}`}
@@ -48,7 +49,7 @@ const Footer = () => {
                                     {contactInfo.email}
                                 </a>
                             </div>
-                            <div className="flex items-center space-x-3">
+                            <div className="flex items-center space-x-3 justify-center md:justify-start">
                                 <HiPhone className="text-orange-500" size={18} />
                                 <a
                                     href={`tel:${contactInfo.phone}`}
@@ -57,16 +58,15 @@ const Footer = () => {
                                     {contactInfo.phone}
                                 </a>
                             </div>
-                            <div className="flex items-start space-x-3">
+                            <div className="flex items-start space-x-3 justify-center md:justify-start">
                                 <HiLocationMarker className="text-orange-500 mt-1" size={18} />
-                                <span className="text-gray-300">
-                                    {contactInfo.address}
-                                </span>
+                                <div className="text-gray-300 flex flex-col">
+                                    <span>{contactInfo.address}</span>
+                                    <span>{contactInfo.address2}</span>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
-
-                    {/* Services Links */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -111,13 +111,13 @@ const Footer = () => {
                 >
                     <div className="flex items-center space-x-3 mb-4 sm:mb-0">
                         <img
-                            src="/src/assets/logo_Doulos_blue.svg"
+                            src={LOGO}
                             alt="Doulos Logo"
                             className="h-8 w-auto"
                         />
                         <span className="text-lg font-semibold">Doulos Theological Seminary</span>
                     </div>
-                    <div className="text-gray-400 text-sm">
+                    <div className="text-gray-400 text-center text-sm">
                         © {new Date().getFullYear()} Doulos Theological Seminary. All rights reserved.
                     </div>
                 </motion.div>

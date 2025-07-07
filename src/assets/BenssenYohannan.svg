@@ -1,9 +1,0 @@
-<!-- Placeholder image for Principal -->
-<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-  <rect width="300" height="300" fill="#f3f4f6"/>
-  <circle cx="150" cy="120" r="40" fill="#6b7280"/>
-  <ellipse cx="150" cy="220" rx="60" ry="40" fill="#6b7280"/>
-  <text x="150" y="270" text-anchor="middle" fill="#374151" font-family="sans-serif" font-size="12">
-    Dr. Benssen V. Yohannan
-  </text>
-</svg>
