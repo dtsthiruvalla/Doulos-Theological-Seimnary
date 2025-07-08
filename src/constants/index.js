@@ -23,8 +23,9 @@ import abeyAbsalom from "../assets/OfficeTeam/AbeyAbsalom.jpg";
 import nikhilMathew from "../assets/OfficeTeam/NikhilMathew.jpg";
 import abinabraham from "../assets/OfficeTeam/PrAbinAbraham.jpg";
 import jamesMathew from "../assets/Faculty/JamesMathew.jpg";
-import abrahamg from "../assets/Faculty/abrahamgeorge.jpg";
 import finnythomas from "../assets/Faculty/finnythomas.jpg";
+import abrahamg from "../assets/Faculty/abrahamgeorge.jpg";
+import subeesh from "../assets/Faculty/subeesh.jpg";
 import lipson from "../assets/Faculty/lipson.jpg";
 import rev from "../assets/Faculty/Rev.png";
 import pro1 from "../assets/pro1.jpg";
@@ -117,14 +118,20 @@ export const teamData = {
       qualification: "M.Div, M.Th",
       image: shiju,
     },
-  ],
-  faculty: [
     {
       name: "Thomas George M",
       position: "Dean of Students",
       qualification: "B.Th, M.Div",
       image: thomasGeorge,
     },
+  ],
+  faculty: [
+    {
+      name: "Rev VP Philip",
+      qualification: "MA, B.D, M.Th M.Phil",
+      image: rev,
+    },
+
     {
       name: "Dr. KP Saji Kumar",
       qualification: "M.A, B.D, M.Th, Ph.D",
@@ -146,6 +153,22 @@ export const teamData = {
       image: ruble,
     },
     {
+      name: "Dr. James Mathew",
+      qualification: "Ph.D",
+      image: jamesMathew,
+    },
+    {
+      name: "Dr. Abraham George",
+      qualification: "Ph.D",
+      image: abrahamg,
+    },
+    {
+      name: "Dr. Jipson Lawrance ",
+      qualification: "B.Com, B.Th, B.Lisc, M.A, Ph.D",
+      qualification2: "M.A, M.Th, Ph.D",
+      image: lipson,
+    },
+    {
       name: "Pr. V.A. Sunny",
       qualification: "B.Th",
       image: vasunny,
@@ -164,11 +187,6 @@ export const teamData = {
       name: "Pr. Azariah Joseph",
       qualification: "M.A, B.D",
       image: azariah,
-    },
-    {
-      name: "Pr. Joy P Abraham",
-      qualification: "B.Th",
-      image: joyabraham,
     },
     {
       name: "Pr. V.G. Thomaskutty",
@@ -201,30 +219,14 @@ export const teamData = {
       image: subyjohnson,
     },
     {
-      name: "Dr. James Mathew",
-      qualification: "Ph.D",
-      image: jamesMathew,
-    },
-    {
-      name: "Dr. Abraham George",
-      qualification: "Ph.D",
-      image: abrahamg,
+      name: "Subeesh M Mathew",
+      qualification: "M.Sc. Counselling ",
+      image: subeesh,
     },
     {
       name: "Finny George Thomas",
       qualification: "M.Sc. in Counselling Psychology",
       image: finnythomas,
-    },
-    {
-      name: "Dr. Lipson Lawrance J",
-      qualification: "B.Com, B.Th, B.Lisc, M.A, Ph.D",
-      qualification2: "M.A, M.Th, Ph.D",
-      image: lipson,
-    },
-    {
-      name: "Rev VP Philip",
-      qualification: "MA, B.D, M.Th M.Phil",
-      image: rev,
     },
   ],
   officeTeam: [
