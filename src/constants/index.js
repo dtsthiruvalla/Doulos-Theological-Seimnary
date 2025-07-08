@@ -12,7 +12,7 @@ export const navigationLinks = [
 ];
 
 export const director = {
-  image2: "src/assets/BenssenYohannan.webp"
+  image2: "src/assets/BenssenYohannan.webp",
 };
 export const footerLinks = {
   company: [
@@ -50,7 +50,7 @@ export const teamData = {
     email: "benson.yohanan@gmail.com",
     phone: "+91 98475 99603",
     qualifications: ["BA", "M.Div", "M.Th", "D.Min", "PhD"],
-    image: "src/assets/BenssenYohannan.webp",
+    image: "dist/assets/BenssenYohannan.webp",
   },
   administrators: [
     {

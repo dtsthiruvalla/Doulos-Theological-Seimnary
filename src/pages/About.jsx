@@ -73,11 +73,11 @@ const QuoteBox = () => (
                 transition={{ duration: 0.8 }}
                 className="relative"
             >
-                <div className="text-8xl text-orange-500 mb-6 opacity-50">"</div>
+                <div className="text-8xl text-orange-500 mb-6 opacity-50">“</div>
                 <blockquote className="text-3xl md:text-4xl font-light italic leading-relaxed mb-6">
                     To be a doulos of Christ is not a position of shame, but the highest calling—to willingly bind oneself to the will of the Master.
                 </blockquote>
-                <div className="text-8xl text-orange-500 rotate-180 opacity-50">"</div>
+                <div className="text-8xl text-orange-500 rotate-180 opacity-50">❝</div>
             </motion.div>
         </div>
     </section>
