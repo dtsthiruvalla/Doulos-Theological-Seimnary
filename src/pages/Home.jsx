@@ -12,7 +12,7 @@ import {
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import ScrollReveal from '../components/ScrollReveal';
-import { teamData, director } from '../constants';
+import { teamData } from '../constants';
 
 const Home = () => {
     return (
@@ -369,11 +369,11 @@ const DirectorDetails = () => (
             >
                 <Card className="text-center">
                     <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="flex-shrink-0">
+                        <div className="flex-shrink-0 flex justify-center items-center w-32 h-32">
                             <img
-                                src={director.image2}
+                                src={teamData.principal.image}
                                 alt={teamData.principal.name}
-                                className="w-32 h-32 rounded-full object-cover shadow-lg"
+                                className="w-32 h-32 rounded-full object-cover object-center shadow-lg"
                             />
                         </div>
                         <div className="flex-grow text-left">

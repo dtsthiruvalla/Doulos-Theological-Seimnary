@@ -180,7 +180,7 @@ export const teamData = {
     {
       name: "Pr. Shjiu Thomas",
       qualification: "M.Div, M.Th",
-      image: shjiu,
+      image: shiju,
     },
     {
       name: "Sis. Suby Johnson",
