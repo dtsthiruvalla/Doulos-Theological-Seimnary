@@ -4,6 +4,7 @@ import { HiMail, HiPhone, HiAcademicCap } from 'react-icons/hi';
 import Card from '../components/ui/Card';
 import { teamData } from '../constants';
 
+
 const OurTeam = () => {
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-20">

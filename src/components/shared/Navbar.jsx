@@ -4,8 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX, HiSun, HiMoon } from 'react-icons/hi';
 import { useTheme } from '../../context/ThemeContext';
 import { navigationLinks } from '../../constants';
-
-import LOGO from '../../assets/logo_Doulos_blue6.png'; // Ensure this path is correct   
+import LOGO from '../../assets/logo_Doulos_bluef.png'; // Ensure this path is correct   
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -118,7 +117,7 @@ const Navbar = () => {
 };
 
 const NavLink = ({ to, children, external, isActive }) => {
-    const baseClasses = "relative px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus:bg-blue-800/10 dark:focus:bg-blue-400/10 rounded-md";
+    const baseClasses = "relative px-3 py-2 text-sm font-medium transition-colors duration-200  rounded-md";
     const activeClasses = isActive
         ? "text-blue-800 dark:text-blue-400"
         : "text-gray-700 dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-400";

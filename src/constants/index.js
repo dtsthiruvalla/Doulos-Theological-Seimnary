@@ -1,3 +1,27 @@
+import drBenssenIMG from "../assets/Administrators/DrBenssenYohannanIMG.jpg";
+import ajuAlexIMG from "../assets/Administrators/AjuAlexIMG.jpeg";
+import lijoBenssen from "../assets/Administrators/MrsLijoBenssenIMG.jpg";
+import mrsGirija from "../assets/Administrators/MrsGirijaSamIMG.jpg";
+import prSonu from "../assets/Administrators/PrSonuGeorgeIMG.jpg";
+import shiju from "../assets/Administrators/shiju.jpeg";
+import thomasGeorge from "../assets/Faculty/thomasgeorge.jpg";
+import azariah from "../assets/Faculty/azariah.jpg";
+import johnMammen from "../assets/Faculty/JohnMammen.jpg";
+import joyabraham from "../assets/Faculty/joyabraham.jpg";
+import regimon from "../assets/Faculty/regimon.jpg";
+import vgthomas from "../assets/Faculty/vgthomas.jpg";
+import vasunny from "../assets/Faculty/vasunny.jpg";
+import thomasMathew from "../assets/Faculty/ThomasMathew.jpg";
+import jamesabraham from "../assets/Faculty/jamesabraham.jpg";
+import ruble from "../assets/Faculty/Ruble.jpg";
+import shaju from "../assets/Faculty/DrShaju.jpg";
+import subyjohnson from "../assets/Faculty/subyjohnson.jpg";
+import kpsaji from "../assets/Faculty/KPSajiKumar.jpg";
+import sabuphilip from "../assets/Faculty/SabuSPhilip.jpg";
+import jainyjames from "../assets/Faculty/jainyjames.jpg";
+
+// IMPORTS ////////////////////////////////////////////////////
+
 export const navigationLinks = [
   { name: "About", path: "/about" },
   { name: "Programs", path: "/programs" },
@@ -11,9 +35,6 @@ export const navigationLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
-export const director = {
-  image2: "src/assets/BenssenYohannan.webp",
-};
 export const footerLinks = {
   company: [
     { name: "About Us", path: "/about" },
@@ -50,134 +71,121 @@ export const teamData = {
     email: "benson.yohanan@gmail.com",
     phone: "+91 98475 99603",
     qualifications: ["BA", "M.Div", "M.Th", "D.Min", "PhD"],
-    image: "dist/assets/BenssenYohannan.webp",
+    image: drBenssenIMG,
   },
   administrators: [
-    {
-      name: "Rev. Aju Alex",
-      position: "Academic Dean",
-      qualification: "B.Th, M.Div, M.Th",
-      image: "src/assets/Administrators/AjuAlex.jpeg",
-    },
-    {
-      name: "Mrs. Lijo Benssen",
-      position: "Administrator",
-      qualification: "B.Th, MSW",
-      image: "src/assets/Administrators/MrsLijoBenssen.jpg",
-    },
     {
       name: "Pr. Sonu George",
       position: "Vice Principal",
       qualification: "B.Com, B.D , M.Th",
-      image: "src/assets/Administrators/PrSonuGeorge.jpg",
+      image: prSonu,
+    },
+    {
+      name: "Rev. Aju Alex",
+      position: "Academic Dean",
+      qualification: "B.Th, M.Div",
+      image: ajuAlexIMG,
     },
     {
       name: "Mrs. Girija Sam",
       position: "Registrar",
       qualification: "MSW, B.D(SS), HRDCS",
-      image: "src/assets/Administrators/MrsGirijaSam.jpg",
+      image: mrsGirija,
+    },
+    {
+      name: "Mrs. Lijo Benssen",
+      position: "Administrator - Counselling & Psychology",
+      qualification: "B.Th, MSW",
+      image: lijoBenssen,
+    },
+    {
+      name: "Pr. Shiju Thomas",
+      position: "Manager",
+      qualification: "M.Div, M.Th",
+      image: shiju,
     },
   ],
   faculty: [
     {
-      name: "Dr. P.S. Prince",
-      qualification: "MA, MSc, B.D, STM, D.Miss.",
-      image: "null",
+      name: "Thomas George M",
+      position: "Dean of Students",
+      qualification: "B.Th, M.Div",
+      image: thomasGeorge,
     },
     {
       name: "Dr. KP Saji Kumar",
       qualification: "M.A, B.D, M.Th, Ph.D",
-      image: "src/assets/Faculty/KPSajiKumar.jpg",
+      image: kpsaji,
     },
     {
       name: "Dr. Sabu S Philip",
       qualification: "LLb, MA, M.Th, Ph.D",
-      image: "src/assets/Faculty/SabuSPhilip.jpg",
-    },
-    {
-      name: "Dr. John K Mathew",
-      qualification: "Ph.D (USA)",
-      image: "src/assets/Faculty/JohnKMathew.jpg",
+      image: sabuphilip,
     },
     {
       name: "Dr. Shaju C Joseph",
       qualification: "D.Min",
-      image: "src/assets/Faculty/DrShaju.jpg",
+      image: shaju,
     },
     {
       name: "Dr. Ruble Joseph",
       qualification: "M.Th, M.Phil, Ph.D",
-      image: "src/assets/Faculty/Ruble.jpg",
-    },
-    {
-      name: "Dr. Allan Pallivadakkan",
-      qualification: "BSW, MCS, P.A.M.A, M.Phil, D.Min",
-      image: "null",
+      image: ruble,
     },
     {
       name: "Pr. V.A. Sunny",
       qualification: "B.Th",
-      image: "src/assets/Faculty/vasunny.jpg",
+      image: vasunny,
     },
     {
       name: "Pr. Thomas Mathew",
       qualification: "B.Th",
-      image: "src/assets/Faculty/ThomasMathew.jpg",
+      image: thomasMathew,
     },
     {
       name: "Pr. John Mammen",
       qualification: "M.Com, M.Div , M.Th",
-      image: "src/assets/Faculty/JohnMammen.jpg",
+      image: johnMammen,
     },
     {
       name: "Pr. Azariah Joseph",
       qualification: "M.A, B.D",
-      image: "src/assets/Faculty/azariah.jpg",
+      image: azariah,
     },
     {
       name: "Pr. Joy P Abraham",
       qualification: "B.Th",
-      image: "src/assets/Faculty/joyabraham.jpg",
+      image: joyabraham,
     },
     {
       name: "Pr. V.G. Thomaskutty",
       qualification: "B.A, M.Div, M.Th",
-      image: "src/assets/Faculty/vgthomas.jpg",
+      image: vgthomas,
     },
     {
       name: "Pr. Regimon Jacob",
       qualification: "B.A, B.D, M.Th",
-      image: "src/assets/Faculty/regimon.jpg",
+      image: regimon,
     },
     {
       name: "Pr. James Abraham",
       qualification: "M.Com, B.Th, BTS",
-      image: "src/assets/Faculty/jamesabraham.jpg",
-    },
-    {
-      name: "Pr. Thomas George M.",
-      qualification: "M.Div",
-      image: "src/assets/Faculty/thomasgeorge.jpg",
+      image: jamesabraham,
     },
     {
       name: "Sis. Jainy James",
       qualification: "M.Th",
-      image: "src/assets/Faculty/jainyjames.jpg",
+      image: jainyjames,
     },
     {
       name: "Pr. Shjiu Thomas",
       qualification: "M.Div, M.Th",
-      image: "src/assets/Faculty/shjiuthomas.jpg",
+      image: shjiu,
     },
     {
       name: "Sis. Suby Johnson",
       qualification: "M.Div",
-      image: "src/assets/Faculty/subyjohnson.jpg",
-    },
-    {
-      name: "Pr. V.M. Jacob",
-      qualification: "Th.D",
-      image: "src/assets/Faculty/vmjacob.jpg",
+      image: subyjohnson,
     },
   ],
   officeTeam: [
