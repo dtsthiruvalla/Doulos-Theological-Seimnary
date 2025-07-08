@@ -318,7 +318,7 @@ const PrincipalMessage = () => (
             >
                 <Card className="max-w-5xl mx-auto">
                     <h2 className="text-3xl font-bold mb-6 text-center text-blue-800 dark:text-blue-400">
-                        Principal & Director's Message
+                        Director & Principal's Message
                     </h2>
                     <div className="prose prose-lg dark:prose-invert max-w-none">
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
