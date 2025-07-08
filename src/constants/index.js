@@ -246,12 +246,6 @@ export const teamData = {
       phone: "+9-66545360691",
       image: abinabraham,
     },
-    {
-      name: "Pr Abin Abraham ",
-      position: "Media Coordinator",
-      phone: "+9-66545360691",
-      image: abinabraham,
-    },
   ],
 };
 

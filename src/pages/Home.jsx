@@ -50,6 +50,35 @@ const Home = () => {
     );
 };
 
+const AdmissionMarquee = () => (
+    <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        className="w-full flex justify-center mt-4"
+    >
+        <div className="relative overflow-hidden rounded-lg shadow border border-blue-200/20 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 px-0.5 py-0.5 max-w-xl w-full">
+            <motion.div
+                initial={{ x: '100%' }}
+                animate={{ x: '-100%' }}
+                transition={{
+                    delay: 1.5,
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: 'linear',
+                }}
+                className="whitespace-nowrap py-2 px-4 flex items-center"
+            >
+                <span className="text-base md:text-lg font-semibold tracking-wide text-white flex items-center">
+                    <span className="inline-block w-2 h-2 bg-orange-400 rounded-full mr-2 animate-pulse"></span>
+                    ADMISSION OPEN FOR NEW SEMESTER
+                    <span className="inline-block w-2 h-2 bg-orange-400 rounded-full ml-2 animate-pulse"></span>
+                </span>
+            </motion.div>
+        </div>
+    </motion.div>
+);
+
 const HeroSection = () => (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-t from-blue-900 via-blue-800 to-stone-900 text-white overflow-hidden">
         {/* Background Pattern */}
@@ -80,6 +109,8 @@ const HeroSection = () => (
             </motion.div>
             {/* Call to Action Buttons */}
             <CallToActionButtons />
+            {/* Admission Marquee */}
+            <AdmissionMarquee />
         </div>
 
 
