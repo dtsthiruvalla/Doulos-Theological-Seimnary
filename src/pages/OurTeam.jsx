@@ -227,11 +227,17 @@ const TeamMemberCard = ({ member }) => (
             {member.position}
         </p>
         {member.qualification && (
-            <div className="flex justify-center mb-3">
+            <div className="flex flex-col items-center mb-3 space-y-1">
                 <span className="inline-flex items-center space-x-1 px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm">
                     <HiAcademicCap size={14} />
                     <span>{member.qualification}</span>
                 </span>
+                {member.qualification2 && (
+                    <span className="inline-flex items-center space-x-1 px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm">
+                        <HiAcademicCap size={14} />
+                        <span>{member.qualification2}</span>
+                    </span>
+                )}
             </div>
         )}
         {member.email && (

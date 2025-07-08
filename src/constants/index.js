@@ -217,8 +217,8 @@ export const teamData = {
     },
     {
       name: "Dr. Lipson Lawrance J",
-      qualification:
-        "(B.Com; B.Th; B.Lisc; M.A  (Ancient Greek Education); M.A (Counseling Psychology); M.Th. (Biblical Expository); Ph.D ( Experimental psychology); Ph.D (Education);",
+      qualification: "B.Com, B.Th, B.Lisc, M.A, Ph.D",
+      qualification2: "M.A, M.Th, Ph.D",
       image: lipson,
     },
     {
