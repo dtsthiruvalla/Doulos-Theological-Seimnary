@@ -331,8 +331,8 @@ const PrincipalMessage = () => (
                             <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">In His service,</p>
                             <p className="font-semibold text-gray-900 dark:text-white">Pastor Dr. Benssen V Yohannan</p>
                             <p className="text-sm text-gray-600 dark:text-gray-300">BA, M.Div, M.Th, D.Min, PhD</p>
-                            <p className="text-sm text-gray-600 dark:text-gray-300">Principal & Director</p>
-                            <p className="text-sm text-gray-600 dark:text-gray-300">Doulos Biblical Seminary Vechoochira, Thiruvalla</p>
+                            <p className="text-sm text-gray-600 dark:text-gray-300">Director & Principal</p>
+                            <p className="text-sm text-gray-600 dark:text-gray-300">Doulos Theological Seminary, Thiruvalla</p>
                         </div>
                     </div>
                 </Card>
