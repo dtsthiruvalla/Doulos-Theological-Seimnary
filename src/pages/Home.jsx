@@ -12,6 +12,7 @@ import {
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import ScrollReveal from '../components/ScrollReveal';
+import doulosLogo from '../assets/logo_Doulos_blue7.png';
 import { teamData } from '../constants';
 
 const Home = () => {
@@ -175,12 +176,13 @@ const CallToActionButtons = () => (
 
 const AboutDoulosSnippet = () => (
     <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
+                    className="text-center"
                 >
                     <h2 className="text-4xl font-bold mb-6">About Doulos</h2>
                     <h3 className="text-2xl font-semibold text-blue-800 dark:text-blue-400 mb-4">
@@ -197,13 +199,13 @@ const AboutDoulosSnippet = () => (
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="relative"
+                    className="relative flex justify-center"
                 >
-                    <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-2xl">
+                    <div className=" border border-gray-700  h-60 w-60 rounded-2xl overflow-hidden shadow-2xl">
                         <img
-                            src="/api/placeholder/600/400"
-                            alt="Seminary Campus"
-                            className="w-full h-full object-cover"
+                            src={doulosLogo}
+                            alt="Doulos Theological Seminary"
+                            className="w-60 h-60 object-cover mx-auto "
                         />
                     </div>
                 </motion.div>

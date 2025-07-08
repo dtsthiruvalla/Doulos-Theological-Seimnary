@@ -22,7 +22,17 @@ import jainyjames from "../assets/Faculty/jainyjames.jpg";
 import abeyAbsalom from "../assets/OfficeTeam/AbeyAbsalom.jpg";
 import nikhilMathew from "../assets/OfficeTeam/NikhilMathew.jpg";
 import abinabraham from "../assets/OfficeTeam/PrAbinAbraham.jpg";
-
+import jamesMathew from "../assets/Faculty/JamesMathew.jpg";
+import abrahamg from "../assets/Faculty/abrahamgeorge.jpg";
+import finnythomas from "../assets/Faculty/finnythomas.jpg";
+import lipson from "../assets/Faculty/lipson.jpg";
+import rev from "../assets/Faculty/Rev.png";
+import pro1 from "../assets/pro1.jpg";
+import pro2 from "../assets/pro2.jpg";
+import pro3 from "../assets/pro3.jpg";
+import pro4 from "../assets/pro4.jpg";
+import pro5 from "../assets/pro5.jpg";
+import pro6 from "../assets/pro6.jpg";
 // IMPORTS ////////////////////////////////////////////////////
 
 export const navigationLinks = [
@@ -90,20 +100,20 @@ export const teamData = {
       image: ajuAlexIMG,
     },
     {
-      name: "Mrs. Girija Sam",
-      position: "Registrar",
-      qualification: "MSW, B.D(SS), HRDCS",
-      image: mrsGirija,
-    },
-    {
       name: "Mrs. Lijo Benssen",
       position: "Administrator - Counselling & Psychology",
       qualification: "B.Th, MSW",
       image: lijoBenssen,
     },
     {
+      name: "Mrs. Girija Sam",
+      position: "Registrar",
+      qualification: "MSW, B.D(SS), HRDCS",
+      image: mrsGirija,
+    },
+    {
       name: "Pr. Shiju Thomas",
-      position: "Manager",
+      position: "Administrator",
       qualification: "M.Div, M.Th",
       image: shiju,
     },
@@ -180,15 +190,41 @@ export const teamData = {
       qualification: "M.Th",
       image: jainyjames,
     },
-    {
-      name: "Pr. Shjiu Thomas",
-      qualification: "M.Div, M.Th",
-      image: shiju,
-    },
+    // {
+    //   name: "Pr. Shjiu Thomas",
+    //   qualification: "M.Div, M.Th",
+    //   image: shiju,
+    // },
     {
       name: "Sis. Suby Johnson",
       qualification: "M.Div",
       image: subyjohnson,
+    },
+    {
+      name: "Dr. James Mathew",
+      qualification: "Ph.D",
+      image: jamesMathew,
+    },
+    {
+      name: "Dr. Abraham George",
+      qualification: "Ph.D",
+      image: abrahamg,
+    },
+    {
+      name: "Finny George Thomas",
+      qualification: "M.Sc. in Counselling Psychology",
+      image: finnythomas,
+    },
+    {
+      name: "Dr. Lipson Lawrance J",
+      qualification:
+        "(B.Com; B.Th; B.Lisc; M.A  (Ancient Greek Education); M.A (Counseling Psychology); M.Th. (Biblical Expository); P.hD ( Experimental psychology); P.hD (Education);",
+      image: lipson,
+    },
+    {
+      name: "Rev VP Philip",
+      qualification: "MA, B.D, M.Th M.Phil",
+      image: rev,
     },
   ],
   officeTeam: [
@@ -207,7 +243,13 @@ export const teamData = {
     {
       name: "Pr Abin Abraham ",
       position: "Media Coordinator",
-      phone: "+91-",
+      phone: "+9-66545360691",
+      image: abinabraham,
+    },
+    {
+      name: "Pr Abin Abraham ",
+      position: "Media Coordinator",
+      phone: "+9-66545360691",
       image: abinabraham,
     },
   ],
@@ -219,7 +261,7 @@ export const programsData = {
       id: "bth",
       name: "Bachelor of Theology (B.Th.)",
       description: "Comprehensive foundation in biblical studies and theology",
-      image: "/placeholder-program1.jpg",
+      image: pro1,
       syllabus: {
         "First Year": {
           "Sem I": [
@@ -293,7 +335,7 @@ export const programsData = {
       id: "mdiv",
       name: "Master of Divinity (M.Div.)",
       description: "Advanced theological education for ministry leadership",
-      image: "/placeholder-program2.jpg",
+      image: pro2,
       syllabus: {
         "First Year": {
           "Sem I": [
@@ -345,7 +387,7 @@ export const programsData = {
       id: "mth",
       name: "Master of Theology (M.Th.)",
       description: "Specialized theological research and advanced study",
-      image: "/placeholder-program3.jpg",
+      image: pro3,
       syllabus: {
         "First Year": {
           "Sem I": [
@@ -390,7 +432,7 @@ export const programsData = {
       id: "dcc",
       name: "Diploma in Christian Counselling",
       description: "Foundation course in Christian counselling principles",
-      image: "/placeholder-counselling1.jpg",
+      image: pro4,
       syllabus: {
         Content: "Will be updated soon",
       },
@@ -400,7 +442,7 @@ export const programsData = {
       name: "Bachelor of Christian Counselling",
       description:
         "Comprehensive undergraduate program in Christian counselling",
-      image: "/placeholder-counselling2.jpg",
+      image: pro5,
       syllabus: {
         "First Year": {
           "Sem I": [
@@ -483,7 +525,7 @@ export const programsData = {
       id: "ma-counselling",
       name: "MA in Counselling Psychology",
       description: "Advanced study in Christian counselling and psychology",
-      image: "/placeholder-counselling3.jpg",
+      image: pro6,
       syllabus: {
         "First Year": {
           "Sem I": [

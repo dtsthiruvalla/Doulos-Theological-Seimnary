@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import Modal from '../components/ui/Modal';
+import ajuAlex from '../assets/Administrators/AjuAlexIMG.jpeg';
+import lijoBenssen from '../assets/Administrators/MrsLijoBenssenIMG.jpg';
+
+
 import { programsData } from '../constants';
 
 const Programs = () => {
@@ -55,7 +59,7 @@ const AcademicDeanSection = () => (
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                         <div className="lg:col-span-1">
                             <img
-                                src="/api/placeholder/300/300"
+                                src={ajuAlex}
                                 alt="Rev Aju Alex"
                                 className="w-48 h-48 rounded-full object-cover mx-auto shadow-lg"
                             />
@@ -111,64 +115,41 @@ const TheologicalProgramsSection = ({ onProgramClick }) => (
     </section>
 );
 
-const CounsellingInstituteSection = ({ onProgramClick }) => (
+const CounsellingInstituteSection = () => (
     <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-center mb-12"
+                transition={{ duration: 0.8 }}
             >
-                <h2 className="text-4xl font-bold mb-4">Doulos Institution of Counselling & Psychology</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <Card>
-                        <h3 className="text-2xl font-semibold mb-4 text-blue-800 dark:text-blue-400">
-                            About Doulos Institute for Counselling and Psychology
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                            Doulos Institute for Counselling and Psychology is committed to equipping individuals with the knowledge, skills, and spiritual foundation needed to serve in the field of Christian counselling. Rooted in biblical truth and integrated with sound psychological principles, our institute offers professional training for those who are called to bring healing, hope, and wholeness to individuals, families, and communities.
-                        </p>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                            We offer a range of academic and practical programs including the Diploma in Christian Counselling (DCC), Bachelor in Christian Counselling (BCC), and Master of Arts (MA) in Counselling and Psychology. Each program is designed to promote personal transformation and prepare students for effective service in churches, institutions, and clinical settings.
-                        </p>
-                        <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
-                            <p className="font-semibold text-gray-900 dark:text-white">Administrator</p>
-                            <p className="text-gray-600 dark:text-gray-300">Lijo Benssen</p>
+                <Card className="max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                        <div className="lg:col-span-1">
+                            <img
+                                src={lijoBenssen}
+                                alt="Lijo Benssen"
+                                className="w-48 h-48 rounded-full object-cover mx-auto shadow-lg"
+                            />
                         </div>
-                    </Card>
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <img
-                        src="/api/placeholder/500/400"
-                        alt="Counselling Institute"
-                        className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                </motion.div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {programsData.counselling.map((program, index) => (
-                    <ProgramCard
-                        key={program.id}
-                        program={program}
-                        index={index}
-                        onClick={() => onProgramClick(program)}
-                    />
-                ))}
-            </div>
+                        <div className="lg:col-span-2">
+                            <h2 className="text-3xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+                                From the Administrator's Desk
+                            </h2>
+                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                Doulos Institute for Counselling and Psychology is committed to equipping individuals with the knowledge, skills, and spiritual foundation needed to serve in the field of Christian counselling. Rooted in biblical truth and integrated with sound psychological principles, our institute offers professional training for those who are called to bring healing, hope, and wholeness to individuals, families, and communities.
+                            </p>
+                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                We offer a range of academic and practical programs including the Diploma in Christian Counselling (DCC), Bachelor in Christian Counselling (BCC), and Master of Arts (MA) in Counselling and Psychology. Each program is designed to promote personal transformation and prepare students for effective service in churches, institutions, and clinical settings.
+                            </p>
+                            <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
+                                <p className="font-semibold text-gray-900 dark:text-white">Mrs Lijo Benssen</p>
+                                <p className="text-sm text-gray-600 dark:text-gray-300">Administrator - Counselling & Psychology</p>
+                            </div>
+                        </div>
+                    </div>
+                </Card>
+            </motion.div>
         </div>
     </section>
 );
@@ -182,7 +163,7 @@ const ProgramCard = ({ program, index, onClick }) => (
         <Card className="h-full cursor-pointer group" onClick={onClick}>
             <div className="aspect-w-16 aspect-h-9 mb-4 rounded-lg overflow-hidden">
                 <img
-                    src="/api/placeholder/400/225"
+                    src={program.image || `/api/placeholder/300/200?text=${program.name}`}
                     alt={program.name}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/ui/Card';
+import doulosLogo from '../assets/logo_Doulos_blue7.png'; // Update with actual image path
 
 const About = () => {
     return (
@@ -27,10 +28,10 @@ const AboutDoulosSection = () => (
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-5xl font-bold mb-6">About Doulos</h1>
-                    <h2 className="text-3xl font-semibold text-blue-800 dark:text-blue-400 mb-4">
+                    <h2 className="text-2xl font-semibold text-blue-800 dark:text-blue-400 mb-4">
                         Training Disciples
                     </h2>
-                    <h2 className="text-3xl font-semibold text-orange-600 mb-8">
+                    <h2 className="text-2xl font-semibold text-orange-600 mb-8">
                         Transforming Nations
                     </h2>
                     <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -48,16 +49,16 @@ const AboutDoulosSection = () => (
                     transition={{ duration: 0.8 }}
                     className="relative"
                 >
-                    <div className="aspect-w-4 aspect-h-3 rounded-xl overflow-hidden shadow-2xl">
+                    <div className="border border-gray-700  h-60 w-60 rounded-2xl overflow-hidden shadow-2xl">
                         <img
-                            src="/api/placeholder/600/450"
+                            src={doulosLogo}
                             alt="Seminary Campus"
-                            className="w-full h-full object-cover"
+                            className="w-60 h-60 object-cover mx-auto"
                         />
                     </div>
-                    <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-orange-500 rounded-full flex items-center justify-center shadow-lg">
-                        <span className="text-white font-bold text-lg">Since 1995</span>
-                    </div>
+                    {/* <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                        <span className="text-white font-bold text-lg"></span>
+                    </div> */}
                 </motion.div>
             </div>
         </div>
