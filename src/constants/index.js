@@ -19,7 +19,7 @@ import subyjohnson from "../assets/Faculty/subyjohnson.jpg";
 import kpsaji from "../assets/Faculty/KPSajiKumar.jpg";
 import sabuphilip from "../assets/Faculty/SabuSPhilip.jpg";
 import jainyjames from "../assets/Faculty/jainyjames.jpg";
-import abeyjames from "../assets/OfficeTeam/AbeyJames.jpg";
+import abeyAbsalom from "../assets/OfficeTeam/AbeyAbsalom.jpg";
 import nikhilMathew from "../assets/OfficeTeam/NikhilMathew.jpg";
 import abinabraham from "../assets/OfficeTeam/PrAbinAbraham.jpg";
 
@@ -196,7 +196,7 @@ export const teamData = {
       name: "Abey Absalom",
       position: "Office Staff",
       phone: "+91-9400130835",
-      image: abeyjames,
+      image: abeyAbsalom,
     },
     {
       name: "Nikhil Mathew",
