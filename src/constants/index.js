@@ -83,7 +83,7 @@ export const teamData = {
     position: "Principal & Director",
     email: "benson.yohanan@gmail.com",
     phone: "+91 98475 99603",
-    qualifications: ["BA", "M.Div", "M.Th", "D.Min", "PhD"],
+    qualifications: ["BA", "M.Div", "M.Th", "D.Min", "Ph.D"],
     image: drBenssenIMG,
   },
   administrators: [
@@ -218,7 +218,7 @@ export const teamData = {
     {
       name: "Dr. Lipson Lawrance J",
       qualification:
-        "(B.Com; B.Th; B.Lisc; M.A  (Ancient Greek Education); M.A (Counseling Psychology); M.Th. (Biblical Expository); P.hD ( Experimental psychology); P.hD (Education);",
+        "(B.Com; B.Th; B.Lisc; M.A  (Ancient Greek Education); M.A (Counseling Psychology); M.Th. (Biblical Expository); Ph.D ( Experimental psychology); Ph.D (Education);",
       image: lipson,
     },
     {

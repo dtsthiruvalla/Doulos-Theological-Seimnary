@@ -115,7 +115,7 @@ const TheologicalProgramsSection = ({ onProgramClick }) => (
     </section>
 );
 
-const CounsellingInstituteSection = () => (
+const CounsellingInstituteSection = ({ onProgramClick }) => (
     <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -123,7 +123,7 @@ const CounsellingInstituteSection = () => (
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
             >
-                <Card className="max-w-5xl mx-auto">
+                <Card className="max-w-5xl mx-auto mb-16">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                         <div className="lg:col-span-1">
                             <img
@@ -150,6 +150,30 @@ const CounsellingInstituteSection = () => (
                     </div>
                 </Card>
             </motion.div>
+
+            {/* Counselling Programs */}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-12"
+            >
+                <h2 className="text-4xl font-bold mb-4">Counselling & Psychology Programs</h2>
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Professional training programs that integrate biblical truth with sound psychological principles for effective Christian counselling ministry.
+                </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {programsData.counselling.map((program, index) => (
+                    <ProgramCard
+                        key={program.id}
+                        program={program}
+                        index={index}
+                        onClick={() => onProgramClick(program)}
+                    />
+                ))}
+            </div>
         </div>
     </section>
 );
@@ -163,7 +187,7 @@ const ProgramCard = ({ program, index, onClick }) => (
         <Card className="h-full cursor-pointer group" onClick={onClick}>
             <div className="aspect-w-16 aspect-h-9 mb-4 rounded-lg overflow-hidden">
                 <img
-                    src={program.image || `/api/placeholder/300/200?text=${program.name}`}
+                    src={program.image}
                     alt={program.name}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
