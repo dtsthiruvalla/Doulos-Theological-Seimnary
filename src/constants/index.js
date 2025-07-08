@@ -19,6 +19,9 @@ import subyjohnson from "../assets/Faculty/subyjohnson.jpg";
 import kpsaji from "../assets/Faculty/KPSajiKumar.jpg";
 import sabuphilip from "../assets/Faculty/SabuSPhilip.jpg";
 import jainyjames from "../assets/Faculty/jainyjames.jpg";
+import abeyjames from "../assets/OfficeTeam/AbeyJames.jpg";
+import nikhilMathew from "../assets/OfficeTeam/NikhilMathew.jpg";
+import abinabraham from "../assets/OfficeTeam/PrAbinAbraham.jpg";
 
 // IMPORTS ////////////////////////////////////////////////////
 
@@ -193,19 +196,19 @@ export const teamData = {
       name: "Abey Absalom",
       position: "Office Staff",
       phone: "+91-9400130835",
-      image: "src/assets/OfficeTeam/AbeyAbsalom.jpg",
+      image: abeyjames,
     },
     {
       name: "Nikhil Mathew",
       position: "Office Staff",
       phone: "+91-9630426566",
-      image: "src/assets/OfficeTeam/NikhilMathew.jpg",
+      image: nikhilMathew,
     },
     {
       name: "Pr Abin Abraham ",
       position: "Media Coordinator",
       phone: "+91-",
-      image: "src/assets/OfficeTeam/PrAbinAbraham.jpg",
+      image: abinabraham,
     },
   ],
 };
