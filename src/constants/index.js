@@ -81,7 +81,7 @@ export const contactInfo = {
 export const teamData = {
   principal: {
     name: "Pastor Dr. Benssen V. Yohannan",
-    position: "Principal & Director",
+    position: "Director & Principal",
     email: "benson.yohanan@gmail.com",
     phone: "+91 98475 99603",
     qualifications: ["BA", "M.Div", "M.Th", "D.Min", "Ph.D"],
