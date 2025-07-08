@@ -47,18 +47,15 @@ const AboutDoulosSection = () => (
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="relative"
+                    className="flex justify-center items-center"
                 >
-                    <div className="border border-gray-700  h-60 w-60 rounded-2xl overflow-hidden shadow-2xl">
+                    <div className="border border-gray-700 h-60 w-60 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center bg-white dark:bg-gray-900">
                         <img
                             src={doulosLogo}
-                            alt="Seminary Campus"
-                            className="w-60 h-60 object-cover mx-auto"
+                            alt="Doulos Logo"
+                            className="max-w-full max-h-full object-contain mx-auto"
                         />
                     </div>
-                    {/* <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-orange-500 rounded-full flex items-center justify-center shadow-lg">
-                        <span className="text-white font-bold text-lg"></span>
-                    </div> */}
                 </motion.div>
             </div>
         </div>
@@ -74,11 +71,11 @@ const QuoteBox = () => (
                 transition={{ duration: 0.8 }}
                 className="relative"
             >
-                <div className="text-8xl text-orange-500 mb-6 opacity-50">“</div>
+                <div className="text-8xl text-orange-500 mb-6 opacity-50">"</div>
                 <blockquote className="text-3xl md:text-4xl font-light italic leading-relaxed mb-6">
                     To be a doulos of Christ is not a position of shame, but the highest calling—to willingly bind oneself to the will of the Master.
                 </blockquote>
-                <div className="text-8xl text-orange-500 rotate-180 opacity-50">❝</div>
+                <div className="text-8xl text-orange-500 rotate-180 opacity-50">"</div>
             </motion.div>
         </div>
     </section>
