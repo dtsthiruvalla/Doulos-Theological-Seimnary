@@ -1,11 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/ui/Card';
+import SEO from '../components/SEO';
 import doulosLogo from '../assets/logo_Doulos_blue7.png'; // Update with actual image path
 
 const About = () => {
     return (
-        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-20">
+        <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-20">
+            <SEO
+                title="About Doulos Theological Seminary - Training Disciples, Transforming Nations"
+                description="Learn about Doulos Theological Seminary's mission to train committed servants of Christ for gospel ministry. Our biblical education programs equip students for cross-cultural missions and church leadership."
+                keywords="Doulos Theological Seminary about, biblical education, theological training, ministry preparation, Christian seminary, Thiruvalla seminary"
+                canonical="https://dtsthiruvalla.com/about"
+                ogTitle="About Doulos Theological Seminary - Training Disciples, Transforming Nations"
+                ogDescription="Learn about Doulos Theological Seminary's mission to train committed servants of Christ for gospel ministry. Our biblical education programs equip students for cross-cultural missions and church leadership."
+                ogImage="https://dtsthiruvalla.com/src/assets/logo_Doulos_blue7.png"
+            />
+
             {/* About Doulos Section */}
             <AboutDoulosSection />
 
@@ -14,7 +25,7 @@ const About = () => {
 
             {/* Mission, Vision, Values Cards */}
             <MissionVisionValues />
-        </div>
+        </main>
     );
 };
 
@@ -27,7 +38,7 @@ const AboutDoulosSection = () => (
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h1 className="text-5xl font-bold mb-6">About Doulos</h1>
+                    <h1 className="text-5xl font-bold mb-6">About Doulos Theological Seminary</h1>
                     <h2 className="text-2xl font-semibold text-blue-800 dark:text-blue-400 mb-4">
                         Training Disciples
                     </h2>
@@ -52,7 +63,7 @@ const AboutDoulosSection = () => (
                     <div className="border border-gray-700 h-60 w-60 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center bg-white dark:bg-gray-900">
                         <img
                             src={doulosLogo}
-                            alt="Doulos Logo"
+                            alt="Doulos Theological Seminary Emblem - Training Disciples, Transforming Nations"
                             className="max-w-full max-h-full object-contain mx-auto"
                         />
                     </div>

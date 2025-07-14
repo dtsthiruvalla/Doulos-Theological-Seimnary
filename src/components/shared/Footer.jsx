@@ -7,7 +7,7 @@ import LOGO from '../../assets/logo_Doulos_blue7.png'; // Ensure this path is co
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 dark:bg-black text-white">
+        <footer className="bg-gray-900 dark:bg-black text-white" role="contentinfo">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 text-center md:text-left">
@@ -38,7 +38,7 @@ const Footer = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                     >
-                        <h3 className="text-lg font-semibold mb-4 text-orange-500">Doulos College</h3>
+                        <h3 className="text-lg font-semibold mb-4 text-orange-500">Doulos Theological Seminary</h3>
                         <div className="space-y-3">
                             <div className="flex items-center space-x-3 justify-center md:justify-start">
                                 <HiMail className="text-orange-500" size={18} />
@@ -97,7 +97,7 @@ const Footer = () => {
                 >
                     <div className="max-w-4xl  items-center mx-auto">
                         <p className="text-gray-300 leading-relaxed text-center">
-                            Doulos College is a premier theological institution specializing in comprehensive biblical education and ministry training. We help students and ministry leaders develop deep theological understanding, practical ministry skills, and spiritual formation that equips them for effective service in God's kingdom and transformational leadership in their communities.
+                            Doulos Theological Seminary is a premier theological institution specializing in comprehensive biblical education and ministry training. We help students and ministry leaders develop deep theological understanding, practical ministry skills, and spiritual formation that equips them for effective service in God's kingdom and transformational leadership in their communities.
                         </p>
                     </div>
                 </motion.div>
@@ -112,7 +112,7 @@ const Footer = () => {
                     <div className="flex items-center space-x-3 mb-4 sm:mb-0">
                         <img
                             src={LOGO}
-                            alt="Doulos Logo"
+                            alt="Doulos Theological Seminary Logo - Christian Education and Ministry Training"
                             className="h-8 w-auto"
                         />
                         <span className="text-lg font-semibold">Doulos Theological Seminary</span>

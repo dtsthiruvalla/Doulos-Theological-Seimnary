@@ -12,12 +12,23 @@ import {
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 import doulosLogo from '../assets/logo_Doulos_blue7.png';
 import { teamData } from '../constants';
 
 const Home = () => {
     return (
-        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+        <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+            <SEO
+                title="Doulos Theological Seminary - Biblical Education & Ministry Training"
+                description="Doulos Theological Seminary in Thiruvalla offers comprehensive biblical education and ministry training. Join our B.Th, M.Div, and M.Th programs for spiritual growth and theological excellence."
+                keywords="Doulos Theological Seminary, theological education, biblical studies, ministry training, Thiruvalla, Kerala, Christian education, seminary, divinity school"
+                canonical="https://dtsthiruvalla.com"
+                ogTitle="Doulos Theological Seminary - Biblical Education & Ministry Training"
+                ogDescription="Doulos Theological Seminary in Thiruvalla offers comprehensive biblical education and ministry training. Join our B.Th, M.Div, and M.Th programs for spiritual growth and theological excellence."
+                ogImage="https://dtsthiruvalla.com/src/assets/logo_Doulos_blue7.png"
+            />
+
             {/* Hero Section */}
             <HeroSection />
 
@@ -46,7 +57,7 @@ const Home = () => {
 
             {/* Contact Snippet */}
             <ContactSnippet />
-        </div>
+        </main>
     );
 };
 
@@ -93,9 +104,11 @@ const HeroSection = () => (
                 transition={{ duration: 1 }}
             >
                 <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                    Step into your{' '}
-                    <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-                        Calling
+                    <span className="block text-white mb-2">Doulos Theological Seminary</span>
+                    <span className="block text-3xl md:text-4xl">Step into your{' '}
+                        <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+                            Calling
+                        </span>
                     </span>
                 </h1>
                 <motion.p
@@ -156,10 +169,10 @@ const IntroBlocks = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                        Why Choose Doulos?
+                        Why Choose Doulos Theological Seminary?
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Discover the pillars of our theological education.
+                        Discover the pillars of our theological education at Doulos Theological Seminary.
                     </p>
                 </ScrollReveal>
 
@@ -206,7 +219,7 @@ const CallToActionButtons = () => (
 );
 
 const AboutDoulosSnippet = () => (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800">
+    <article className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <motion.div
@@ -215,7 +228,7 @@ const AboutDoulosSnippet = () => (
                     transition={{ duration: 0.8 }}
                     className="text-center"
                 >
-                    <h2 className="text-4xl font-bold mb-6">About Doulos</h2>
+                    <h2 className="text-4xl font-bold mb-6">About Doulos Theological Seminary</h2>
                     <h3 className="text-2xl font-semibold text-blue-800 dark:text-blue-400 mb-4">
                         Training Disciples
                     </h3>
@@ -235,14 +248,14 @@ const AboutDoulosSnippet = () => (
                     <div className=" border border-gray-700  h-60 w-60 rounded-2xl overflow-hidden shadow-2xl">
                         <img
                             src={doulosLogo}
-                            alt="Doulos Theological Seminary"
+                            alt="Doulos Theological Seminary Logo - Biblical Education and Ministry Training in Thiruvalla"
                             className="w-60 h-60 object-cover mx-auto "
                         />
                     </div>
                 </motion.div>
             </div>
         </div>
-    </section>
+    </article>
 );
 
 const QuoteBox = () => (
@@ -405,7 +418,7 @@ const DirectorDetails = () => (
                         <div className="flex-shrink-0 flex justify-center items-center w-32 h-32">
                             <img
                                 src={teamData.principal.image}
-                                alt={teamData.principal.name}
+                                alt="Pastor Dr. Benssen V. Yohannan - Director and Principal of Doulos Theological Seminary"
                                 className="w-32 h-32 rounded-full object-cover object-center shadow-lg"
                             />
                         </div>

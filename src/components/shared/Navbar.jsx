@@ -31,6 +31,8 @@ const Navbar = () => {
                 ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg'
                 : 'bg-transparent'
                 }`}
+            role="navigation"
+            aria-label="Main navigation"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20  ">
@@ -38,7 +40,7 @@ const Navbar = () => {
                     <Link to="/" className="flex items-center space-x-3 focus:outline-none focus-visible:outline-none ">
                         <img
                             src={LOGO}
-                            alt="Doulos Logo"
+                            alt="Doulos Theological Seminary Logo - Biblical Education in Thiruvalla"
                             className="h-16 mb-2 scale-120 w-auto transition-transform duration-300 transform"
                         />
                         <div className="hidden sm:block leading-tight ml-2">
