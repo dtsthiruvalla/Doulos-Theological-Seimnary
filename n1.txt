@@ -1,0 +1,8 @@
+I've made tables manually in my database, check the #doulostheologicalseminary.sql file
+for the structure and relationships. take a look at it and make necessary changes to the ApplicationForm.jsx and wherever needed to ensure that the application data is stored correctly in the database.
+Also, ensure that the form validation is in place and that the data is being sent to the server correctly.
+
+read the #config.php for any details and setup you need to do.
+
+Make sure to add all the safety checks and validations to ensure that the data is being stored correctly and securely.
+work on the security aspects of the application, such as sanitizing inputs, validating data, and preventing SQL injection attacks and all necessary security measures.

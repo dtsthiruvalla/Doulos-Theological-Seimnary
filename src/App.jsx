@@ -13,6 +13,8 @@ const Programs = React.lazy(() => import('./pages/Programs'));
 const OurTeam = React.lazy(() => import('./pages/OurTeam'));
 const Gallery = React.lazy(() => import('./pages/Gallery'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const ApplicationForm = React.lazy(() => import('./pages/ApplicationForm'));
+const ProtectedAdminRoute = React.lazy(() => import('./pages/ProtectedAdminRoute'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -41,6 +43,8 @@ function App() {
                 <Route path="/our-team" element={<OurTeam />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/application-form" element={<ApplicationForm />} />
+                <Route path="/applications" element={<ProtectedAdminRoute />} />
               </Routes>
             </Suspense>
           </main>

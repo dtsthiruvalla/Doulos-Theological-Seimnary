@@ -1,0 +1,15 @@
+# Enable CORS for API requests
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+# Handle preflight requests
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^api/(.*)$ api/$1 [R=200,L]
+
+# PHP file uploads
+php_value upload_max_filesize 2M
+php_value post_max_size 8M
+php_value max_execution_time 30
+php_value max_input_time 60

@@ -46,6 +46,7 @@ export const navigationLinks = [
     path: "https://doulosseminarylibrary.blogspot.com/",
     external: true,
   },
+  { name: "Apply Now", path: "/application-form" },
   { name: "Contact", path: "/contact" },
 ];
 
