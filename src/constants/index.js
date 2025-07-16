@@ -199,11 +199,11 @@ export const teamData = {
       qualification: "B.A, B.D, M.Th",
       image: regimon,
     },
-    {
-      name: "Pr. James Abraham",
-      qualification: "M.Com, B.Th, BTS",
-      image: jamesabraham,
-    },
+    // {
+    //   name: "Pr. James Abraham",
+    //   qualification: "M.Com, B.Th, BTS",
+    //   image: jamesabraham,
+    // },
     {
       name: "Sis. Jainy James",
       qualification: "M.Th",
