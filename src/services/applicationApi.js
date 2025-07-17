@@ -12,6 +12,8 @@ export const applicationApi = baseApi.injectEndpoints({
         Object.keys(applicationData).forEach((key) => {
           if (
             key !== "documents" &&
+            key !== "personalPhoto" &&
+            key !== "certificate" &&
             applicationData[key] !== null &&
             applicationData[key] !== undefined
           ) {
@@ -19,11 +21,22 @@ export const applicationApi = baseApi.injectEndpoints({
           }
         });
 
-        // Add document files
+        // Add files with correct field names that PHP expects
+        if (applicationData.personalPhoto) {
+          formData.append('personalPhoto', applicationData.personalPhoto);
+        }
+        if (applicationData.certificate) {
+          formData.append('certificate', applicationData.certificate);
+        }
+
+        // Legacy support for documents array (convert to individual fields)
         if (applicationData.documents && applicationData.documents.length > 0) {
-          applicationData.documents.forEach((file, index) => {
-            formData.append(`documents[]`, file);
-          });
+          if (applicationData.documents[0]) {
+            formData.append('personalPhoto', applicationData.documents[0]);
+          }
+          if (applicationData.documents[1]) {
+            formData.append('certificate', applicationData.documents[1]);
+          }
         }
 
         return {

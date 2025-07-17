@@ -267,26 +267,9 @@ const ApplicationForm = () => {
         }
 
         try {
-            // Prepare application data with documents array
-            const applicationData = {
-                ...formData,
-                documents: []
-            };
-
-            // Add files to documents array
-            if (formData.personalPhoto) {
-                applicationData.documents.push(formData.personalPhoto);
-            }
-            if (formData.certificate) {
-                applicationData.documents.push(formData.certificate);
-            }
-
-            // Remove file fields from main data as they're now in documents
-            delete applicationData.personalPhoto;
-            delete applicationData.certificate;
-
-            // Submit using RTK Query
-            const result = await submitApplication(applicationData).unwrap();
+            // Submit using RTK Query with the exact form data
+            // Don't modify the formData structure - send files as separate fields
+            const result = await submitApplication(formData).unwrap();
 
             if (result.success) {
                 // Success message with admission number

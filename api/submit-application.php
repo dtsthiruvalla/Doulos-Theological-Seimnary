@@ -3,6 +3,11 @@ require_once 'config.php';
 
 // CORS headers are already handled in config.php
 
+// Debug: Log what we receive (remove this in production)
+file_put_contents('submit-debug.log', date('Y-m-d H:i:s') . " METHOD: " . $_SERVER['REQUEST_METHOD'] . "\n", FILE_APPEND);
+file_put_contents('submit-debug.log', "POST DATA: " . json_encode($_POST) . "\n", FILE_APPEND);
+file_put_contents('submit-debug.log', "FILES DATA: " . json_encode($_FILES) . "\n\n", FILE_APPEND);
+
 // Only allow POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
