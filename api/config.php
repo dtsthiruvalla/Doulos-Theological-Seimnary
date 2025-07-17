@@ -1,9 +1,17 @@
 <?php
 
 // Add these headers to ALL your PHP files
-if (isset($_SERVER['HTTP_ORIGIN']) && 
-    ($_SERVER['HTTP_ORIGIN'] === 'https://dtsthiruvalla.com' || $_SERVER['HTTP_ORIGIN'] === 'https://www.dtsthiruvalla.com')) {
-    header("Access-Control-Allow-Origin: " . $_SERVER['HTTP_ORIGIN']);
+$allowed_origins = [
+    'https://dtsthiruvalla.com',
+    'https://www.dtsthiruvalla.com',
+    'https://doulos-theological-seimnary.vercel.app', // Vercel production
+    'https://doulos-theological-seimnary-git-main-dtsthiruvallagmail.vercel.app' // Vercel git branch
+];
+
+// Check if the origin is allowed, including Vercel preview URLs
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (in_array($origin, $allowed_origins) || preg_match('/^https:\/\/doulos-theological-seimnary-.*\.vercel\.app$/', $origin)) {
+    header("Access-Control-Allow-Origin: " . $origin);
 }
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
