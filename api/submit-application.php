@@ -268,7 +268,7 @@ try {
             'success' => true,
             'message' => 'Application submitted successfully',
             'admission_no' => $admissionNo,
-            'application_id' => $applicationId
+            'application_id' => $applicationId  
         ]);
     } catch (Exception $e) {
         // Rollback transaction
@@ -289,5 +289,3 @@ try {
     http_response_code(500);
     echo json_encode(['error' => 'Internal server error. Please try again later.']);
 }
-?>
-?>
