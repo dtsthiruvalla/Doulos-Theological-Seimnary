@@ -1,32 +1,47 @@
 <?php
-
-// Add these headers to ALL your PHP files
+// CORS Configuration - Must be at the very top
 $allowed_origins = [
     'https://dtsthiruvalla.com',
     'https://www.dtsthiruvalla.com',
-    'https://doulos-theological-seimnary.vercel.app', // Vercel production
-    'https://doulos-theological-seimnary-git-main-dtsthiruvallagmail.vercel.app' // Vercel git branch
+    'https://doulos-theological-seimnary.vercel.app',
+    'https://doulos-theological-seimnary-git-main-dtsthiruvallagmail.vercel.app'
 ];
 
-// Check if the origin is allowed, including Vercel preview URLs
+// Get the origin from the request
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-if (in_array($origin, $allowed_origins) || preg_match('/^https:\/\/doulos-theological-seimnary-.*\.vercel\.app$/', $origin)) {
-    header("Access-Control-Allow-Origin: " . $origin);
-}
-header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
-header("Content-Type: application/json");
 
-// Handle preflight requests
-if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+// Check if origin is allowed (including Vercel preview URLs)
+$origin_allowed = false;
+if (in_array($origin, $allowed_origins)) {
+    $origin_allowed = true;
+} elseif (preg_match('/^https:\/\/doulos-theological-seimnary-.*\.vercel\.app$/', $origin)) {
+    $origin_allowed = true;
+}
+
+// Set CORS headers
+if ($origin_allowed && $origin) {
+    header("Access-Control-Allow-Origin: " . $origin);
+} else {
+    // For debugging - temporarily allow all origins
+    header("Access-Control-Allow-Origin: *");
+}
+
+header("Access-Control-Allow-Methods: POST, GET, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+header("Access-Control-Allow-Credentials: true");
+header("Content-Type: application/json; charset=utf-8");
+
+// Handle preflight requests immediately
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
     exit(0);
 }
 
 
 // Database configuration
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'doulostheologicalseminary');
-define('DB_USER', 'dtsadmin');
+define('DB_NAME', 'cpses_doulostheologicalseminary'); // GoDaddy format: username_dbname
+define('DB_USER', 'cpses_dtsadmin'); // GoDaddy format: username_dbuser
 define('DB_PASS', 'dtsBenssen603');
 
 // Security settings
