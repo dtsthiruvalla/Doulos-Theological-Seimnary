@@ -1,8 +1,8 @@
 <?php
 require_once 'config.php';
 
-// CORS headers
-header("Access-Control-Allow-Origin: *");
+// Add these headers to ALL your PHP files
+header("Access-Control-Allow-Origin: https://dtsthiruvalla.com");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 header("Content-Type: application/json");
@@ -11,6 +11,7 @@ header("Content-Type: application/json");
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
+
 
 // Only allow POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

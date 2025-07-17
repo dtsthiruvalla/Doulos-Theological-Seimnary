@@ -1,9 +1,25 @@
 <?php
+
+// Add these headers to ALL your PHP files
+if (isset($_SERVER['HTTP_ORIGIN']) && 
+    ($_SERVER['HTTP_ORIGIN'] === 'https://dtsthiruvalla.com' || $_SERVER['HTTP_ORIGIN'] === 'https://www.dtsthiruvalla.com')) {
+    header("Access-Control-Allow-Origin: " . $_SERVER['HTTP_ORIGIN']);
+}
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+header("Content-Type: application/json");
+
+// Handle preflight requests
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    exit(0);
+}
+
+
 // Database configuration
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'doulostheologicalseminary');
-define('DB_USER', 'dtsuser');
-define('DB_PASS', '2l#d$JEg9A&=');
+define('DB_USER', 'dtsadmin');
+define('DB_PASS', 'dtsBenssen603');
 
 // Security settings
 define('UPLOAD_DIR', __DIR__ . '/uploads/');
