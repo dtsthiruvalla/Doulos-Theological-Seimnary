@@ -1,8 +1,8 @@
 <?php
 // CORS Configuration - Must be at the very top
 $allowed_origins = [
-    'https://dtsthiruvalla.com',
-    'https://www.dtsthiruvalla.com',
+    'https://www.dtsthiruvalla.com',  // Primary domain (www version)
+    'https://dtsthiruvalla.com',     // Non-www fallback
     'https://doulos-theological-seimnary.vercel.app',
     'https://doulos-theological-seimnary-git-main-dtsthiruvallagmail.vercel.app'
 ];
