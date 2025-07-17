@@ -4,30 +4,10 @@ require_once 'config.php';
 // CORS headers are already handled in config.php
 
 // Only allow GET requests
-$allowed_origins = [
-    'https://www.dtsthiruvalla.com',  // Primary domain (www version)
-    'https://dtsthiruvalla.com',     // Non-www fallback
-    'https://doulos-theological-seimnary.vercel.app',
-    'https://doulos-theological-seimnary-git-main-dtsthiruvallagmail.vercel.app'
-];
-
-// Get the origin from the request
-$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-
-// Check if origin is allowed (including Vercel preview URLs)
-$origin_allowed = false;
-if (in_array($origin, $allowed_origins)) {
-    $origin_allowed = true;
-} elseif (preg_match('/^https:\/\/doulos-theological-seimnary-.*\.vercel\.app$/', $origin)) {
-    $origin_allowed = true;
-}
-
-// Set CORS headers
-if ($origin_allowed && $origin) {
-    header("Access-Control-Allow-Origin: " . $origin);
-} else {
-    // For debugging - temporarily allow all origins
-    header("Access-Control-Allow-Origin: *");
+if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
+    http_response_code(405);
+    echo json_encode(['error' => 'Method not allowed']);
+    exit;
 }
 
 try {
