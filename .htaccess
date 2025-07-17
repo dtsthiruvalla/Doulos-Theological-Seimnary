@@ -1,49 +1,34 @@
-# Enable PHP execution and proper routing
+# Simple and clear .htaccess for hybrid setup
 RewriteEngine On
 
-# Force HTTPS and www
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
-RewriteRule ^(.*)$ https://www.%1/$1 [R=301,L]
+# Force www redirect (GoDaddy handles HTTPS)
+RewriteCond %{HTTP_HOST} ^dtsthiruvalla\.com$ [NC]
+RewriteRule ^(.*)$ https://www.dtsthiruvalla.com/$1 [R=301,L]
 
-# Allow direct access to PHP files in api directory
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# Route API calls to the api directory
-RewriteRule ^api/(.*)$ api/$1 [L]
-
-# For all other requests that don't match files/directories, serve the React app
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !^/api/
-RewriteRule ^(.*)$ index.html [L]
-
-# Ensure PHP files are executed, not downloaded
+# Ensure PHP files execute properly
 <FilesMatch "\.php$">
     SetHandler application/x-httpd-php
 </FilesMatch>
 
-# Security headers
-Header always set X-Content-Type-Options nosniff
-Header always set X-Frame-Options DENY
-Header always set X-XSS-Protection "1; mode=block"
-
-# CORS headers for API endpoints
+# Set CORS headers for API directory
 <LocationMatch "^/api/">
     Header always set Access-Control-Allow-Origin "*"
     Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
     Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
-    Header always set Access-Control-Max-Age "3600"
 </LocationMatch>
 
-# Handle preflight OPTIONS requests
+# Handle OPTIONS requests
 RewriteCond %{REQUEST_METHOD} OPTIONS
-RewriteRule ^api/(.*)$ api/$1 [L]
+RewriteRule ^(.*)$ $1 [R=200,L]
 
-# Deny access to sensitive files
-<FilesMatch "\.(log|sql|env|config)$">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
+# Redirect ONLY the root request and non-existent files to Vercel
+# Do NOT redirect anything in /api/ or any .php files
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^(.*)$ https://doulos-theological-seimnary.vercel.app/ [R=302,L]
+
+# For 404s that are NOT API or PHP, redirect to Vercel
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteCond %{REQUEST_URI} !\.php$
+RewriteRule ^(.*)$ https://doulos-theological-seimnary.vercel.app/$1 [R=302,L]

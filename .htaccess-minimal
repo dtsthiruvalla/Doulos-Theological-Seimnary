@@ -1,0 +1,24 @@
+# Minimal .htaccess - just enable PHP and basic security
+RewriteEngine On
+
+# Ensure PHP files execute
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+# CORS for API calls
+<LocationMatch "^/api/">
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+</LocationMatch>
+
+# Handle OPTIONS
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# Security
+<FilesMatch "\.(log|sql|env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
