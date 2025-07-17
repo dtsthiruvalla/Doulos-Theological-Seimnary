@@ -22,4 +22,3 @@ echo json_encode([
         'origin' => $_SERVER['HTTP_ORIGIN'] ?? 'not set'
     ]
 ]);
-?>

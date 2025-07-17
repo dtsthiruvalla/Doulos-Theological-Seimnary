@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 try {
     $db = new Database();
     $pdo = $db->getConnection();
-    
+
     // Get all courses with their timings
     $stmt = $pdo->prepare("
         SELECT 
@@ -28,16 +28,16 @@ try {
         GROUP BY c.id, c.course_code, c.course_name, c.total_semesters
         ORDER BY c.course_code
     ");
-    
+
     $stmt->execute();
     $courses = $stmt->fetchAll();
-    
+
     // Format the response
     $formattedCourses = [];
     foreach ($courses as $course) {
         $timings = $course['timings'] ? explode(',', $course['timings']) : [];
         $timingIds = $course['timing_ids'] ? explode(',', $course['timing_ids']) : [];
-        
+
         $formattedTimings = [];
         for ($i = 0; $i < count($timings); $i++) {
             $formattedTimings[] = [
@@ -45,7 +45,7 @@ try {
                 'timing' => trim($timings[$i])
             ];
         }
-        
+
         $formattedCourses[] = [
             'value' => strtolower($course['course_code']),
             'label' => $course['course_name'],
@@ -54,7 +54,7 @@ try {
             'timings' => $formattedTimings
         ];
     }
-    
+
     echo json_encode([
         'success' => true,
         'courses' => $formattedCourses,
@@ -65,7 +65,6 @@ try {
             'total_courses' => count($formattedCourses)
         ]
     ]);
-
 } catch (Exception $e) {
     logError("Get courses error: " . $e->getMessage());
     http_response_code(500);
@@ -78,4 +77,3 @@ try {
         ]
     ]);
 }
-?>

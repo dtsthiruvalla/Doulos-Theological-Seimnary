@@ -58,10 +58,12 @@ define('SMTP_PASS', 'your-app-password');
 define('FROM_EMAIL', 'dts.thiruvalla@gmail.com');
 define('FROM_NAME', 'Doulos Theological Seminary');
 
-class Database {
+class Database
+{
     private $pdo;
-    
-    public function __construct() {
+
+    public function __construct()
+    {
         try {
             $this->pdo = new PDO(
                 "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4",
@@ -78,34 +80,41 @@ class Database {
             throw new Exception("Database connection failed");
         }
     }
-    
-    public function getConnection() {
+
+    public function getConnection()
+    {
         return $this->pdo;
     }
 }
 
 // Security functions
-function sanitizeInput($data) {
+function sanitizeInput($data)
+{
     return trim(htmlspecialchars(strip_tags($data)));
 }
 
-function validateEmail($email) {
+function validateEmail($email)
+{
     return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
-function validatePhone($phone) {
+function validatePhone($phone)
+{
     return preg_match('/^[0-9]{10}$/', $phone);
 }
 
-function validateAadhar($aadhar) {
+function validateAadhar($aadhar)
+{
     return preg_match('/^[0-9]{12}$/', $aadhar);
 }
 
-function generateAdmissionNumber() {
+function generateAdmissionNumber()
+{
     return 'DTS' . date('Y') . str_pad(mt_rand(1, 9999), 4, '0', STR_PAD_LEFT);
 }
 
-function logError($message) {
+function logError($message)
+{
     error_log("[DTS Application] " . date('Y-m-d H:i:s') . " - " . $message);
 }
 
@@ -118,4 +127,3 @@ if (defined('DISPLAY_DEBUG') && DISPLAY_DEBUG) {
     ini_set('display_errors', 0);
     error_reporting(0);
 }
-?>

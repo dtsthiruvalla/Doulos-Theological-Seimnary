@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // API Configuration
 const API_BASE_URL =
   process.env.NODE_ENV === "production"
-    ? "https://www.dtsthiruvalla.com/api"  // Use www version to avoid redirects
+    ? "https://www.dtsthiruvalla.com/api" // Use www version to avoid redirects
     : "http://localhost:8080/api";
 
 // Create the base API service
