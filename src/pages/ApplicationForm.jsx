@@ -44,9 +44,15 @@ const ApplicationForm = () => {
     useEffect(() => {
         if (coursesError) {
             console.error('Error loading courses:', coursesError);
+            console.error('Full error object:', JSON.stringify(coursesError, null, 2));
             // The courses will fallback to the default static data
         }
     }, [coursesError]);
+
+    // Debug: Log the courses data when it changes
+    useEffect(() => {
+        console.log('Courses data changed:', { coursesData, loadingCourses, coursesError });
+    }, [coursesData, loadingCourses, coursesError]);
 
     // Handle success/error states
     useEffect(() => {
