@@ -1,10 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 // API Configuration
-const API_BASE_URL =
-  process.env.NODE_ENV === "production"
-    ? "https://www.dtsthiruvalla.com/api" // Use www version to avoid redirects
-    : "http://localhost:8080/api";
+const API_BASE_URL = "https://www.dtsthiruvalla.com/api"; // Always point to GoDaddy for PHP backend
 
 // Create the base API service
 export const baseApi = createApi({

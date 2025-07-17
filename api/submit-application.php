@@ -273,7 +273,7 @@ try {
             'success' => true,
             'message' => 'Application submitted successfully',
             'admission_no' => $admissionNo,
-            'application_id' => $applicationId  
+            'application_id' => $applicationId
         ]);
     } catch (Exception $e) {
         // Rollback transaction

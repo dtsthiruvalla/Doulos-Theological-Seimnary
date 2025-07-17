@@ -1,0 +1,14 @@
+# Exclude PHP backend files from Vercel deployment
+api/
+*.php
+*.sql
+setup_database.sh
+
+# Exclude development files
+.env
+node_modules/
+.git/
+
+# Exclude documentation and misc files
+*.md
+docs/
