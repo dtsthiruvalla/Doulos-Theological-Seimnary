@@ -40,8 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 // Database configuration
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'cpses_doulostheologicalseminary'); // GoDaddy format: username_dbname
-define('DB_USER', 'cpses_dtsadmin'); // GoDaddy format: username_dbuser
+define('DB_NAME', 'doulostheologicalseminary');
+define('DB_USER', 'dtsadmin');
 define('DB_PASS', 'dtsBenssen603');
 
 // Security settings
