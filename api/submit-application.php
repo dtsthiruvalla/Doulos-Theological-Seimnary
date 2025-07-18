@@ -94,7 +94,7 @@ try {
     }
 
     // Validate gender
-    if (!in_array($gender, ['male', 'female', 'other'])) {
+    if (!in_array($gender, ['M', 'F'])) {
         http_response_code(400);
         echo json_encode(['error' => 'Invalid gender value']);
         exit;

@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 // API Configuration - Use different path to avoid conflicts with Vercel
-const API_BASE_URL = "https://dtsthiruvalla.com/api";
+const API_BASE_URL = "https://api.dtsthiruvalla.com";
 
 // Create the base API service
 export const baseApi = createApi({
