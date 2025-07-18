@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// API Configuration
-const API_BASE_URL = "https://www.dtsthiruvalla.com/api"; // Always point to GoDaddy for PHP backend
+// API Configuration - Use different path to avoid conflicts with Vercel
+const API_BASE_URL = "https://dtsthiruvalla.com/api";
 
 // Create the base API service
 export const baseApi = createApi({
