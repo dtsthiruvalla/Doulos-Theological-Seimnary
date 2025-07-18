@@ -1,7 +1,8 @@
 // API Configuration
 const API_BASE_URL =
   process.env.NODE_ENV === "production"
-    ? "https://dtsthiruvalla.com/api"
+    ? // ? "https://dtsthiruvalla.com/api"
+      "https://api.dtsthiruvalla.com"
     : "http://localhost:8080/api";
 
 export const API_ENDPOINTS = {
