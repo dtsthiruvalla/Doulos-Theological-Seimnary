@@ -2,12 +2,41 @@
 require_once 'config.php';
 
 // CORS headers are already handled in config.php
+$allowed_origins = [
+    'https://api.dtsthiruvalla.com', // Main domain
+    'https://dtsthiruvalla.com',     // GoDaddy domain (for API)
+    'https://doulos-theological-seimnary.vercel.app',  // Vercel app
+    'https://doulos-theological-seimnary-git-main-dtsthiruvallagmail.vercel.app'
+];
 
-// Only allow GET requests
-if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
-    http_response_code(405);
-    echo json_encode(['error' => 'Method not allowed']);
-    exit;
+// Get the origin from the request
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+
+// Check if origin is allowed (including Vercel preview URLs)
+$origin_allowed = false;
+if (in_array($origin, $allowed_origins)) {
+    $origin_allowed = true;
+} elseif (preg_match('/^https:\/\/doulos-theological-seimnary-.*\.vercel\.app$/', $origin)) {
+    $origin_allowed = true;
+}
+
+// Set CORS headers
+if ($origin_allowed && $origin) {
+    header("Access-Control-Allow-Origin: " . $origin);
+} else {
+    // For debugging - temporarily allow all origins
+    header("Access-Control-Allow-Origin: *");
+}
+
+header("Access-Control-Allow-Methods: POST, GET, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+header("Access-Control-Allow-Credentials: true");
+header("Content-Type: application/json; charset=utf-8");
+
+// Handle preflight requests immediately
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit(0);
 }
 
 try {
